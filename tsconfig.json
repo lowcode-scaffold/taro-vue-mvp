@@ -1,31 +1,36 @@
 {
-  "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "noImplicitAny": false,
-    "allowSyntheticDefaultImports": true,
-    "outDir": "lib",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictNullChecks": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "rootDir": ".",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ]
-  },
-  "include": ["./src", "global.d.ts"],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "compileOnSave": false
+	"compilerOptions": {
+		"target": "es2017",
+		"module": "commonjs",
+		"removeComments": false,
+		"preserveConstEnums": true,
+		"moduleResolution": "node",
+		"experimentalDecorators": true,
+		"noImplicitAny": false,
+		"noImplicitThis": true, // false 会导致render 函数中 this 没有类型
+		"allowSyntheticDefaultImports": true,
+		"outDir": "lib",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strictNullChecks": true,
+		"sourceMap": true,
+		"baseUrl": ".",
+		"rootDir": ".",
+		"jsx": "preserve",
+		"allowJs": true,
+		"resolveJsonModule": true,
+		// "typeRoots": [
+		// 	"node_modules/@types"
+		// ]
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"global.d.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist"
+	],
+	"compileOnSave": false
 }
