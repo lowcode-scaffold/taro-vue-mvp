@@ -1186,7 +1186,7 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@nutui/nutui-taro@^3.1.14":
+"@nutui/nutui-taro@3.1.14":
   version "3.1.14"
   resolved "https://registry.npmjs.org/@nutui/nutui-taro/-/nutui-taro-3.1.14.tgz#e3942bd743542625d7a0f3f5f0b771513f1604df"
   integrity sha512-PZd9H31JB/e5MPkp01i2XdeIIO+N44VnAARTK33Uc+uPXpbUV8eCZgJCAVQXAcpc3eFEHRQzMsFnbJYzqHCOiA==
@@ -1319,6 +1319,13 @@
     webpack-chain "4.9.0"
     webpack-format-messages "^2.0.5"
     yauzl "2.10.0"
+
+"@tarojs/plugin-html@3.3.19":
+  version "3.3.19"
+  resolved "https://registry.npmjs.org/@tarojs/plugin-html/-/plugin-html-3.3.19.tgz#2c164a526ef6868d64e1b927f5cd908a9ad6fcf1"
+  integrity sha512-wSWmilFNg6iC4MMGTF6XQ0a9auAJPSyh/sL7MWetE69LLH6CxdO64mcngqbgF9ZgsbDl2f4NTIKxdnIAGHPyoQ==
+  dependencies:
+    "@tarojs/shared" "3.3.19"
 
 "@tarojs/plugin-platform-alipay@3.3.19":
   version "3.3.19"
@@ -1766,7 +1773,7 @@
     "@vue/compiler-core" "3.2.26"
     "@vue/shared" "3.2.26"
 
-"@vue/compiler-sfc@3.2.26", "@vue/compiler-sfc@^3.0.0":
+"@vue/compiler-sfc@3.2.26", "@vue/compiler-sfc@^3.2.26":
   version "3.2.26"
   resolved "https://registry.npmjs.org/@vue/compiler-sfc/-/compiler-sfc-3.2.26.tgz#3ce76677e4aa58311655a3bea9eb1cb804d2273f"
   integrity sha512-ePpnfktV90UcLdsDQUh2JdiTuhV0Skv2iYXxfNMOK/F3Q+2BO0AulcVcfoksOpTJGmhhfosWfMyEaEf0UaWpIw==
@@ -10183,7 +10190,7 @@ vue-router@^4.0.11:
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.18"
 
-vue@^3.0.0:
+vue@3.2.26:
   version "3.2.26"
   resolved "https://registry.npmjs.org/vue/-/vue-3.2.26.tgz#5db575583ecae495c7caa5c12fd590dffcbb763e"
   integrity sha512-KD4lULmskL5cCsEkfhERVRIOEDrfEL9CwAsLYpzptOGjaGFNWo3BQ9g8MAb7RaIO71rmVOziZ/uEN/rHwcUIhg==
