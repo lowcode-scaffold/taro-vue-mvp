@@ -1,38 +1,26 @@
 import { Observer } from "../../mobx-vue-lite";
 //import { Button } from "@nutui/nutui-taro";
 import { View, Text, Button } from "@tarojs/components";
-import { observable } from "mobx";
-import { defineComponent, shallowRef } from "vue";
+import { defineComponent } from "vue";
+import useController from "./useController";
+import styles from "./index.module.less";
 
 export default defineComponent({
   setup() {
-    const model1 = shallowRef(
-      observable({
-        count: 0,
-        get double() {
-          return this.count * 2;
-        },
-        increment() {
-          this.count++;
-        },
-      })
-    );
-
-    function handleClick() {
-      model1.value.increment();
-    }
+    const controller = useController();
+    const { model } = controller;
     return {
-      model: model1.value,
-      handleClick,
+      model,
+      controller,
     };
   },
   render() {
     return (
-      <View>
+      <View class={styles.home}>
         <Observer>
-          <Text>{this.model.count}</Text>
+          <Text class={styles.text}>{this.model.count}</Text>
         </Observer>
-        <Button onClick={this.handleClick}>increment</Button>
+        <Button onClick={this.controller.handleClick}>increment</Button>
       </View>
     );
   },

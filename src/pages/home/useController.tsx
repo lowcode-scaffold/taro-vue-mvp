@@ -3,7 +3,12 @@ import { createModel } from "./model";
 
 const useController = () => {
   const model = shallowRef(createModel());
-  return { model: model.value };
+
+  const handleClick = () => {
+    model.value.add();
+  };
+
+  return { model: model.value, handleClick };
 };
 
 export default useController;
