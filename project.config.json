@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "mobx-taro-vue3-logical-separation",
-  "description": "mobx-taro-vue3-logical-separation",
+  "projectname": "taro-vue-mvp",
+  "description": "taro-vue-mvp",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,

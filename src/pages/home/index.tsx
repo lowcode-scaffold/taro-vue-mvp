@@ -1,7 +1,7 @@
-import { Observer } from "../../mobx-vue-lite";
-//import { Button } from "@nutui/nutui-taro";
+// import { Button } from "@nutui/nutui-taro";
 import { View, Text, Button } from "@tarojs/components";
 import { defineComponent } from "vue";
+import { Observer } from "../../mobx-vue-lite";
 import useController from "./useController";
 import styles from "./index.module.less";
 

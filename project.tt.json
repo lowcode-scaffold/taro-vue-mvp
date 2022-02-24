@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "mobx-taro-vue3-logical-separation",
+  "projectname": "taro-vue-mvp",
   "appid": "testAppId",
   "setting": {
     "es6": false,

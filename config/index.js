@@ -1,5 +1,7 @@
+const path = require("path");
+
 const config = {
-  projectName: "mobx-taro-vue3-logical-separation",
+  projectName: "taro-vue-mvp",
   date: "2022-1-9",
   designWidth: 750,
   deviceRatio: {
@@ -16,6 +18,9 @@ const config = {
     options: {},
   },
   framework: "vue3",
+  alias: {
+    "@": path.resolve(__dirname, "..", "src"),
+  },
   mini: {
     postcss: {
       pxtransform: {
