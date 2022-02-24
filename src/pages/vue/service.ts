@@ -1,4 +1,4 @@
-import { delUser, fetchUserList } from "./api";
+import { fetchUserList } from "./api";
 import { Model } from "./model";
 
 export default class Service {
@@ -9,67 +9,48 @@ export default class Service {
   }
 
   async getUserList() {
-    if (this.model.loading) {
+    if (this.model.loading.value) {
       return;
     }
-    this.model.loading = true;
+    this.model.loading.value = true;
     const res = await fetchUserList({
       page: this.model.pagination.page,
       size: this.model.pagination.size,
       name: this.model.filterForm.name,
-    }).catch(() => {});
+    })
+      .catch(() => {})
+      .finally(() => {
+        this.model.loading.value = false;
+      });
     if (res) {
       if (this.model.pagination.page === 1) {
         this.model.userList = res.result.rows;
       } else {
-        this.model.setUserList(this.model.userList.concat(res.result.rows));
+        this.model.userList = this.model.userList.concat(res.result.rows);
       }
-      if (res.result.rows.length >= this.model.pagination.size) {
-        this.model.setPagination((s) => {
-          s.hasMore = true;
-        });
-      } else {
-        this.model.setPagination((s) => {
-          s.hasMore = false;
-        });
-      }
-      this.model.setLoading(false);
+      this.model.pagination.hasMore =
+        res.result.rows.length >= this.model.pagination.size;
     }
   }
 
   changeFilterForm(name: string, value: any) {
-    this.model.setFilterForm((s: any) => {
-      s[name] = value;
-    });
+    (this.model.filterForm as any)[name] = value;
   }
 
   doSearch() {
-    this.model.setPagination((s) => {
-      s.page = 1;
-    });
-    this.model.setRunFetch(this.model.runFetch + 1);
-  }
-
-  async del(id: number) {
-    this.model.setLoading(true);
-    await delUser({ id }).finally(() => {
-      this.model.setLoading(false);
-    });
+    this.model.pagination.page = 1;
+    this.model.runFetch.value += 1;
   }
 
   refresh() {
-    this.model.setPagination((s) => {
-      s.page = 1;
-    });
-    this.model.setRunFetch(this.model.runFetch + 1);
+    this.model.pagination.page = 1;
+    this.model.runFetch.value += 1;
   }
 
   nextPage() {
     if (this.model.pagination.hasMore) {
-      this.model.setPagination((s) => {
-        s.page += 1;
-      });
-      this.model.setRunFetch(this.model.runFetch + 1);
+      this.model.pagination.page += 1;
+      this.model.runFetch.value += 1;
     }
   }
 }
