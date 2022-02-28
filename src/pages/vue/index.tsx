@@ -1,8 +1,8 @@
 import { View, ScrollView } from "@tarojs/components";
-import { Input } from "@nutui/nutui-taro";
 import { defineComponent } from "vue";
 import styles from "index.module.less";
 import { usePresenter } from "./presenter";
+import Input from "@/nutui/Input";
 
 const Page = defineComponent({
   setup() {

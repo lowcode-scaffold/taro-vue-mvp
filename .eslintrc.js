@@ -37,6 +37,7 @@ module.exports = {
     "prefer-promise-reject-errors": "off",
     "consistent-return": "off",
     "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
   },
   settings: {
     "import/parsers": {
