@@ -1,8 +1,9 @@
 import { watch } from "vue";
+import { debounce } from "lodash-es";
 import { useModel } from "./model";
 import Service from "./service";
 
-const usePresenter = () => {
+export const usePresenter = () => {
   const model = useModel();
   const service = new Service(model);
 
@@ -20,12 +21,9 @@ const usePresenter = () => {
     service.changeFilterForm(name, value);
   };
 
-  const handleSearch = useDebounceFn(
-    () => {
-      service.doSearch();
-    },
-    { wait: 300 }
-  ).run;
+  const handleSearch = debounce(() => {
+    service.doSearch();
+  }, 300);
 
   const handleRefresh = () => {
     service.refresh();
@@ -43,5 +41,3 @@ const usePresenter = () => {
     handleNextPage,
   };
 };
-
-export default usePresenter;

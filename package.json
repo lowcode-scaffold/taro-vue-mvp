@@ -51,6 +51,7 @@
 		"@tarojs/mini-runner": "3.3.19",
 		"@tarojs/plugin-html": "^3.4.2",
 		"@tarojs/webpack-runner": "3.3.19",
+		"@types/lodash-es": "^4.17.6",
 		"@types/webpack-env": "^1.13.6",
 		"@typescript-eslint/eslint-plugin": "^4.15.1",
 		"@typescript-eslint/parser": "^4.15.1",
