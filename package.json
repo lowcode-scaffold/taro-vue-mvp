@@ -58,6 +58,7 @@
 		"@vue/compiler-sfc": "^3.2.26",
 		"babel-plugin-import": "^1.13.3",
 		"babel-preset-taro": "3.3.19",
+		"csstype": "^3.0.10",
 		"eslint": "^7.8.1",
 		"eslint-config-airbnb": "^19.0.4",
 		"eslint-config-prettier": "^6.11.0",

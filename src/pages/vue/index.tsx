@@ -16,7 +16,7 @@ const Page = defineComponent({
   render() {
     return (
       <View class={styles.list}>
-        <Input />
+        <Input style={{ paddingBottom: "10px" }} />
       </View>
     );
   },
