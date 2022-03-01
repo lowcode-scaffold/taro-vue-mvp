@@ -1,5 +1,6 @@
 import { View, ScrollView } from "@tarojs/components";
 import { defineComponent } from "vue";
+import { observer } from "@formily/reactive-vue";
 import styles from "./index.module.less";
 import { usePresenter } from "./presenter";
 import { Input, Cell } from "@/nutui";
@@ -35,7 +36,7 @@ const Page = defineComponent({
           className={styles.scrollView}
           scrollY
           refresherEnabled
-          refresherTriggered={this.model.loading.value}
+          refresherTriggered={this.model.loading}
           onRefresherrefresh={() => {
             this.presenter.handleRefresh();
           }}
@@ -43,7 +44,7 @@ const Page = defineComponent({
             this.presenter.handleNextPage();
           }}
         >
-          {this.model.userList.data.map((s) => {
+          {this.model.userList.map((s) => {
             return (
               <Cell title={s.name} key={s.id}>
                 {{
@@ -63,4 +64,4 @@ const Page = defineComponent({
   },
 });
 
-export default Page;
+export default observer(Page);

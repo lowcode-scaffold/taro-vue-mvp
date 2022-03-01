@@ -3,7 +3,9 @@ import { IFetchUserListResult } from "./api";
 
 export const useModel = () => {
   const filterForm = reactive({ name: "" });
-  const userList = reactive<IFetchUserListResult["result"]["rows"]>([]);
+  const userList = reactive<{ data: IFetchUserListResult["result"]["rows"] }>({
+    data: [],
+  });
   const pagination = reactive({ size: 10, page: 1, hasMore: true });
   const loading = ref(false);
   const runFetch = ref(0);

@@ -36,7 +36,9 @@
 	"author": "",
 	"dependencies": {
 		"@babel/runtime": "^7.7.7",
-		"@nutui/nutui-taro": "3.1.14",
+		"@formily/reactive": "^2.0.13",
+		"@formily/reactive-vue": "^2.0.13",
+		"@nutui/nutui-taro": "3.1.17",
 		"@tarojs/components": "^3.4.2",
 		"@tarojs/runtime": "^3.4.2",
 		"@tarojs/taro": "^3.4.2",

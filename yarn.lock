@@ -1365,6 +1365,19 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@formily/reactive-vue@^2.0.13":
+  version "2.0.13"
+  resolved "https://registry.npmjs.org/@formily/reactive-vue/-/reactive-vue-2.0.13.tgz#ae6651d423e8cb77a18bf9464993b873becde8f4"
+  integrity sha512-+QHt7ZIHaihv0Bm+sn82oRiRNxHZgN3o5cKrSAww61NxLAD255PStAZVJWD5iPg3qYXxVrn75iaGcz+yeEaJuw==
+  dependencies:
+    "@formily/reactive" "2.0.13"
+    vue-demi "^0.9.0"
+
+"@formily/reactive@2.0.13", "@formily/reactive@^2.0.13":
+  version "2.0.13"
+  resolved "https://registry.npmjs.org/@formily/reactive/-/reactive-2.0.13.tgz#78817dbc36214493ddf98e29c11623cbbca2a7eb"
+  integrity sha512-DxkQ8dYUWE2ZxO8QXIL6nLzgXgopX79iD3fI05bDvilt3esSakOuBAvWF/HcebF4xh17Iwem7OkDZPm04uZ20g==
+
 "@gar/promisify@^1.0.1":
   version "1.1.2"
   resolved "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
@@ -1492,13 +1505,13 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@nutui/nutui-taro@3.1.14":
-  version "3.1.14"
-  resolved "https://registry.npmjs.org/@nutui/nutui-taro/-/nutui-taro-3.1.14.tgz#e3942bd743542625d7a0f3f5f0b771513f1604df"
-  integrity sha512-PZd9H31JB/e5MPkp01i2XdeIIO+N44VnAARTK33Uc+uPXpbUV8eCZgJCAVQXAcpc3eFEHRQzMsFnbJYzqHCOiA==
+"@nutui/nutui-taro@3.1.17":
+  version "3.1.17"
+  resolved "https://registry.npmjs.org/@nutui/nutui-taro/-/nutui-taro-3.1.17.tgz#1fffd05c6641a27fa62db5650690f8ec9e672f7f"
+  integrity sha512-2n/1Bv9EZ11W7u8vzo22DlPJ5qNGBjQjl9C7q8tH/JdsMYPPvaGgbCmFia/rW+WzI1WVgurI120PKQQKkzFNrg==
   dependencies:
     sass "~1.32.0"
-    vue-router "^4.0.11"
+    vue-router "^4.0.12"
 
 "@pmmmwh/react-refresh-webpack-plugin@0.4.3":
   version "0.4.3"
@@ -2394,10 +2407,10 @@
     "@vue/compiler-dom" "3.2.26"
     "@vue/shared" "3.2.26"
 
-"@vue/devtools-api@^6.0.0-beta.18":
-  version "6.0.0-beta.21.1"
-  resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.0.0-beta.21.1.tgz#f1410f53c42aa67fa3b01ca7bdba891f69d7bc97"
-  integrity sha512-FqC4s3pm35qGVeXRGOjTsRzlkJjrBLriDS9YXbflHLsfA9FrcKzIyWnLXoNm+/7930E8rRakXuAc2QkC50swAw==
+"@vue/devtools-api@^6.0.0":
+  version "6.0.12"
+  resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.0.12.tgz#7b57cce215ae9f37a86984633b3aa3d595aa5b46"
+  integrity sha512-iO/4FIezHKXhiDBdKySCvJVh8/mZPxHpiQrTy+PXVqJZgpTPTdHy4q8GXulaY+UKEagdkBb0onxNQZ0LNiqVhw==
 
 "@vue/reactivity-transform@3.2.26":
   version "3.2.26"
@@ -14448,6 +14461,11 @@ vm2@^3.8.4:
   resolved "https://registry.npmjs.org/vm2/-/vm2-3.9.5.tgz#5288044860b4bbace443101fcd3bddb2a0aa2496"
   integrity sha512-LuCAHZN75H9tdrAiLFf030oW7nJV5xwNMuk1ymOZwopmuK3d2H4L1Kv4+GFHgarKiLfXXLFU+7LDABHnwOkWng==
 
+vue-demi@^0.9.0:
+  version "0.9.1"
+  resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.9.1.tgz#25d6e1ebd4d4010757ff3571e2bf6a1d7bf3de82"
+  integrity sha512-7s1lufRD2l369eFWPjgLvhqCRk0XzGWJsQc7K4q+0mZtixyGIvsK1Cg88P4NcaRIEiBuuN4q1NN4SZKFKwQswA==
+
 vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.10.0:
   version "7.11.0"
   resolved "https://registry.npmjs.org/vue-eslint-parser/-/vue-eslint-parser-7.11.0.tgz#214b5dea961007fcffb2ee65b8912307628d0daf"
@@ -14470,12 +14488,12 @@ vue-loader@^16.0.0-beta.8:
     hash-sum "^2.0.0"
     loader-utils "^2.0.0"
 
-vue-router@^4.0.11:
-  version "4.0.12"
-  resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.0.12.tgz#8dc792cddf5bb1abcc3908f9064136de7e13c460"
-  integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
+vue-router@^4.0.12:
+  version "4.0.13"
+  resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.0.13.tgz#47f06e2f8ff6120bfff3c27ade1356cc9de7d870"
+  integrity sha512-LmXrC+BkDRLak+d5xTMgUYraT3Nj0H/vCbP+7usGvIl9Viqd1UP6AsP0i69pSbn9O0dXK/xCdp4yPw21HqV9Jw==
   dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.18"
+    "@vue/devtools-api" "^6.0.0"
 
 vue-template-compiler@^2.6.10:
   version "2.6.14"

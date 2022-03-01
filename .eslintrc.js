@@ -38,6 +38,9 @@ module.exports = {
     "consistent-return": "off",
     "import/no-unresolved": "off",
     "import/no-extraneous-dependencies": "off",
+    "react/no-unstable-nested-components": "off",
+    "jsx-a11y/alt-text": "off",
+    "react/no-unknown-property": "off",
   },
   settings: {
     "import/parsers": {

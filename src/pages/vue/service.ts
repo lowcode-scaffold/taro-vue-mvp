@@ -24,9 +24,11 @@ export default class Service {
       });
     if (res) {
       if (this.model.pagination.page === 1) {
-        this.model.userList = res.result.rows;
+        this.model.userList.data = res.result.rows;
       } else {
-        this.model.userList = this.model.userList.concat(res.result.rows);
+        this.model.userList.data = this.model.userList.data.concat(
+          res.result.rows
+        );
       }
       this.model.pagination.hasMore =
         res.result.rows.length >= this.model.pagination.size;
