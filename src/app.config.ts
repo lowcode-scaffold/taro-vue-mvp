@@ -1,5 +1,5 @@
 export default {
-  pages: ["pages/home/index"],
+  pages: ["pages/vue/index"],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",

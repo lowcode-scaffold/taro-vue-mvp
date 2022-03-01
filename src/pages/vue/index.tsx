@@ -1,6 +1,7 @@
+// import { Input } from "@nutui/nutui-taro";
 import { View, ScrollView } from "@tarojs/components";
 import { defineComponent } from "vue";
-import styles from "index.module.less";
+import styles from "./index.module.less";
 import { usePresenter } from "./presenter";
 import Input from "@/nutui/Input";
 
@@ -16,7 +17,7 @@ const Page = defineComponent({
   render() {
     return (
       <View class={styles.list}>
-        <Input style={{ paddingBottom: "10px" }} />
+        <Input />
       </View>
     );
   },
